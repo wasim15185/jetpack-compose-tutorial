@@ -1,9 +1,7 @@
 package android.example.jetpack_compose_tutorial
 
 
-import android.example.jetpack_compose_tutorial.ui.progress.Chapter1
-import android.example.jetpack_compose_tutorial.ui.progress.Chapter2
-import android.example.jetpack_compose_tutorial.ui.progress.Chapter3
+import android.example.jetpack_compose_tutorial.ui.progress.*
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,7 +17,11 @@ class MainActivity : ComponentActivity() {
 
 //            Chapter1(R.drawable.suv)
 //            Chapter2()
-            Chapter3()
+//            Chapter3()
+//            Chapter4()
+//            Chapter5()
+//            Chapter5WithDisposableEffect(onBackPressedDispatcher)
+
         }
     }
 }
