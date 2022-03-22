@@ -10,4 +10,9 @@ It is a good practice to place **Nav Controller** top of the composable hierarch
 
 * **Nav Host :** using of **Nav Host** we can define the navigation graph (eg : Screens ,Routes , argument etc .) 
 
+
+We know in android navigation happens **between two fragments or between two activities** .
+But, In android **jetpack compose** navigation happens **between to Composable**
+
 </p>
+
