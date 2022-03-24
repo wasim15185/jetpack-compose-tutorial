@@ -14,5 +14,11 @@ It is a good practice to place **Nav Controller** top of the composable hierarch
 We know in android navigation happens **between two fragments or between two activities** . <br/>
 But, In android **jetpack compose** navigation happens **between to Composable**
 
+#### How to initialize navigation in jetpack compose ? 
+
+* We know 
+
+
+
 </p>
 
