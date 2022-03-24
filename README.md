@@ -22,6 +22,16 @@ but we recommended , we define route ***using Sealed class*** <br/>
 
 Here , we use navigation will happen between two screen `1. HomeScreen` and `2. DetailScreen` .
 
+At first , we have to define Unique Route name inside sealed class named `ScreensHolder` 
+
+```
+sealed class ScreensHolder(val route:String){
+    object Home:ScreensHolder("home_screen")
+    object Detail:ScreensHolder("detail_screen")
+}
+```
+
+
 
 </p>
 
