@@ -18,7 +18,8 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun RequiredArgumentScreen(
-    navController: NavHostController
+    navController: NavHostController,
+    arg:Int
 ){
 
     Box(
@@ -37,7 +38,7 @@ fun RequiredArgumentScreen(
             )
 
             Text(
-                text = "Test ",
+                text = " Argument is  ${arg}",
                 color = Color.Green,
                 fontSize = 26.sp,
                 fontWeight = FontWeight.SemiBold,

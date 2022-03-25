@@ -4,10 +4,13 @@ import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.Req
 import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.DetailScreen
 import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.HomeScreen
 import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.OptionalArgumentScreen
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 
 @Composable
 fun SetupNavGraph(navController: NavHostController){
@@ -32,8 +35,19 @@ fun SetupNavGraph(navController: NavHostController){
             DetailScreen(navController)
         }
 
-        composable(route=ScreensHolder.RequiredArgExample.route){
-            RequiredArgumentScreen(navController)
+        composable(
+            route=ScreensHolder.RequiredArgExample.route,
+            arguments = listOf(
+                navArgument("_id"){
+                    type = NavType.IntType
+                }
+            )
+        ){
+
+            val argument = it.arguments?.getInt("_id")
+            Log.d("Arg", "id is : $argument ")
+
+            RequiredArgumentScreen(navController,argument!!)
         }
 
         composable(route=ScreensHolder.OptionalArgExample.route){

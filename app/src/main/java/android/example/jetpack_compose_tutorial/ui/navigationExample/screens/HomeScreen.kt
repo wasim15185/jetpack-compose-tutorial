@@ -38,8 +38,23 @@ fun HomeScreen(navController: NavHostController) {
                 onClick = {
                     navController.navigate(route = ScreensHolder.Detail.route)
                 }) {
-                Text("Navigate")
+                Text("Navigate to Detail Route")
+            }
 
+            Button(
+                modifier = Modifier.padding(top = 10.dp),
+                onClick = {
+                    navController.navigate(route = "required_argument_screen/"+ 5)
+                }) {
+                Text("Navigate to Required Arg Route")
+            }
+
+            Button(
+                modifier = Modifier.padding(top = 10.dp),
+                onClick = {
+                    navController.navigate(route = ScreensHolder.Detail.route)
+                }) {
+                Text("Navigate to Optional Arg Route")
             }
 
         }

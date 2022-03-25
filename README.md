@@ -29,7 +29,7 @@ two object inside the `ScreensHolder` class .
 sealed class ScreensHolder(val route:String){
     object Home:ScreensHolder("home_screen") // <-- Without argument navigation
     object Detail:ScreensHolder("detail_screen") // <-- Without argument navigation
-    object RequiredArgExample:ScreensHolder("required_argument_screen") // <-- With Required argument navigation ( this is discussed in navigation with arguments  )
+    object RequiredArgExample:ScreensHolder("required_argument_screen/{_id}") // <-- With Required argument navigation ( this is discussed in navigation with arguments  )
     object OptionalArgExample:   ScreensHolder("optional_argument_screen") // <-- With Optional argument navigation ( this is discussed in navigation with arguments  )
 }
 ```
@@ -78,7 +78,8 @@ fun SetupNavGraph(navController: NavHostController){
         composable(route = ScreensHolder.Detail.route){
             DetailScreen()
         }
-
+ 
+        
         
 
     }
@@ -90,6 +91,11 @@ fun SetupNavGraph(navController: NavHostController){
 ### Navigation with arguments 
 
 now, we want navigation with argument . there are two ways where we can do navigation argument **1. Required Argument**  **2. Optional Argument**
+
+**Required Argument** : 
+
+For Simplicity , We focus on particular code for Required Argument Navigation
+- - - -
 
 
 
