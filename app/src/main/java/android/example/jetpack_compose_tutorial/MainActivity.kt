@@ -24,6 +24,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+
                 navController = rememberNavController() // this function create navContoller
 
 //            Chapter1(R.drawable.suv)

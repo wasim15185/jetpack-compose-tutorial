@@ -41,14 +41,47 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            JetpackcomposetutorialTheme { 
                 navController = rememberNavController() //<--  this function create navContoller for us
+            }
         }
     }
 }
 
 ```
 
-***Third***, we have to create NavGraph
+***Third***, we have to create NavGraph so we create a File name `NavGraph` and inside this file have a function which will create **navhost**  .
+
+```
+@Composable
+fun SetupNavGraph(navController: NavHostController){
+
+    NavHost(
+        navController = navController,
+        startDestination = ScreensHolder.Home.route
+    ){
+
+        /**
+         * Inside NavHost lambda-block we can access [composable] function
+         *
+         * [composable] : in this function we have to pass "Route-Name" which is unique and in this function have Lambda-block 
+         * which is for defining for "Destination-Screen" .
+         */
+
+        composable(route = ScreensHolder.Home.route){
+                HomeScreen()
+        }
+
+        composable(route = ScreensHolder.Detail.route){
+            DetailScreen()
+        }
+
+
+    }
+
+}
+
+```
 
 
 </p>
