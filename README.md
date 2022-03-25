@@ -139,7 +139,8 @@ composable(
 See this code  we have to pass  `route` value and `arguments` value to `composable` function .
 Where `arguments` value is array of `navArgument` .
 
-```navArgument("_id"){ // <--here we have pariticularly define which is 'argument' and
+```
+navArgument("_id"){ // <--here we have pariticularly define which is 'argument' and
                     type = NavType.IntType  // have to define type of 'argument'
           }
 ```
