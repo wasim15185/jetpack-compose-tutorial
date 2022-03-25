@@ -22,7 +22,7 @@ but we recommended , we define route ***using Sealed class*** <br/>
 
 Here , we use navigation will happen between two screen `1. HomeScreen` and `2. DetailScreen` .
 
-At first , we have to define Unique Route name inside sealed class named `ScreensHolder` . In this class parameter is String which is route and it must be unique  and there are 
+***At first*** , we have to define Unique Route name inside sealed class named `ScreensHolder` . In this class parameter is String which is route and it must be unique  and there are 
 two object inside the `ScreensHolder` class . 
 
 ```
@@ -32,6 +32,23 @@ sealed class ScreensHolder(val route:String){
 }
 ```
 
+***Secondly*** , we have to create initialize Nav-Controller Object in MainActivity and `rememberNavController()` function create Nav-Controller for us 
+```
+class MainActivity : ComponentActivity() {
+
+    lateinit var navController: NavController
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+                navController = rememberNavController() //<--  this function create navContoller for us
+        }
+    }
+}
+
+```
+
+***Third***, we have to create NavGraph
 
 
 </p>

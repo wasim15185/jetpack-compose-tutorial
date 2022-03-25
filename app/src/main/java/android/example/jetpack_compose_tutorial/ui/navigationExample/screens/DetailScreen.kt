@@ -28,9 +28,9 @@ fun DetailScreen() {
     }
 
 }
-
-@Composable
-@Preview(showBackground = true)
-fun DetailScreenPreview() {
-    DetailScreen()
-}
+//
+//@Composable
+//@Preview(showBackground = true)
+//fun DetailScreenPreview() {
+//    DetailScreen()
+//}

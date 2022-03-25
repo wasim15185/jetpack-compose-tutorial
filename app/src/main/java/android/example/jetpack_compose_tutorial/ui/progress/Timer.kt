@@ -27,6 +27,11 @@ import kotlin.math.sin
 import kotlin.reflect.KProperty
 
 
+
+
+
+
+
 @Composable
 fun CircleView(
     totalTime: Long,

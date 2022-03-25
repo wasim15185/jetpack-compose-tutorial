@@ -29,8 +29,8 @@ fun HomeScreen() {
 
 }
 
-@Composable
-@Preview(showBackground = true)
-fun HomeScreenPreview() {
-    HomeScreen()
-}
+//@Composable
+//@Preview(showBackground = true)
+//fun HomeScreenPreview() {
+//    HomeScreen()
+//}
