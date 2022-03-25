@@ -226,7 +226,13 @@ fun HomeScreen(navController: NavHostController) {
 here **`"required_argument_screen/{_id}"`** represent as **`"required_argument_screen/"+ 5`** where **`_id`** represent is **`5`**
 
 
+**Optional Argument** : 
 
+``` 
+sealed class ScreensHolder(val route:String){
+    object OptionalArgExample:   ScreensHolder("optional_argument_screen?name={_name} && age={_age}")
+}
+```
 
 
 </p>
