@@ -97,9 +97,15 @@ now, we want navigation with argument . there are two ways where we can do navig
 ###### For Simplicity , We focus on particular code for `Required Argument Navigation`
 Here We navigate from `HomeScreen` to `RequiredArgumentScreen` 
 
-**1st step :** we have to define screenholder for unique of route so we have to define routes using sealed class 
+**1st step :** we have to define screenholder for unique of route so we have to define routes using sealed class .
+but noticed one thing in `ScreensHolder` class we write route name like `"required_argument_screen/{_id}"`
 
- 
+ ```
+sealed class ScreensHolder(val route:String){
+    object RequiredArgExample:ScreensHolder("required_argument_screen/{_id}")  
+ }
+```
+
 
 
 
