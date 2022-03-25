@@ -94,7 +94,11 @@ now, we want navigation with argument . there are two ways where we can do navig
 
 **Required Argument** : 
 
-##### For Simplicity , We focus on particular code for `Required Argument Navigation`
+###### For Simplicity , We focus on particular code for `Required Argument Navigation`
+Here We navigate from `HomeScreen` to `RequiredArgumentScreen` 
+
+**1st step :** we have to define screenholder for unique of route so we have to define routes using sealed class 
+
  
 
 
