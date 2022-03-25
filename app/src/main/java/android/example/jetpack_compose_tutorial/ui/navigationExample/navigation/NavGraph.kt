@@ -1,8 +1,9 @@
 package android.example.jetpack_compose_tutorial.ui.navigationExample.navigation
 
-import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.ArgumentExampleScreen
+import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.RequiredArgumentScreen
 import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.DetailScreen
 import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.HomeScreen
+import android.example.jetpack_compose_tutorial.ui.navigationExample.screens.OptionalArgumentScreen
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -31,8 +32,12 @@ fun SetupNavGraph(navController: NavHostController){
             DetailScreen(navController)
         }
 
-        composable(route=ScreensHolder.ArgumentExample.route){
-            ArgumentExampleScreen(navController)
+        composable(route=ScreensHolder.RequiredArgExample.route){
+            RequiredArgumentScreen(navController)
+        }
+
+        composable(route=ScreensHolder.OptionalArgExample.route){
+            OptionalArgumentScreen(navController)
         }
 
     }

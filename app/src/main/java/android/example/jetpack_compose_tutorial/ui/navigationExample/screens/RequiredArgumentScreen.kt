@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun ArgumentExampleScreen(
+fun RequiredArgumentScreen(
     navController: NavHostController
 ){
 
@@ -30,7 +30,7 @@ fun ArgumentExampleScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ){
             Text(
-                text = "Argument Screen",
+                text = "RequiredArgument Screen",
                 color = Color.Red,
                 fontSize = MaterialTheme.typography.h3.fontSize,
                 fontWeight = FontWeight.Bold,
