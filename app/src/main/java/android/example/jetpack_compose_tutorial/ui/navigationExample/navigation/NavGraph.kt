@@ -50,8 +50,25 @@ fun SetupNavGraph(navController: NavHostController){
             RequiredArgumentScreen(navController,argument!!)
         }
 
-        composable(route=ScreensHolder.OptionalArgExample.route){
-            OptionalArgumentScreen(navController)
+        composable(
+            route=ScreensHolder.OptionalArgExample.route,
+            arguments = listOf(
+                navArgument("_name"){
+                    type= NavType.StringType
+                    nullable=true
+                },
+                navArgument("_age"){
+                    type= NavType.IntType // interger cannot be nullable
+                    defaultValue=0
+                 }
+
+            )
+        ){
+
+            val name = it.arguments?.getString("_name")
+            val age = it.arguments?.getInt("_age")
+
+            OptionalArgumentScreen(navController,name!!,age!!)
         }
 
     }

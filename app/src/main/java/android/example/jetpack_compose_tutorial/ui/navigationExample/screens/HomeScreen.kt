@@ -52,7 +52,7 @@ fun HomeScreen(navController: NavHostController) {
             Button(
                 modifier = Modifier.padding(top = 10.dp),
                 onClick = {
-                    navController.navigate(route = ScreensHolder.Detail.route)
+                    navController.navigate(route = ScreensHolder.OptionalArgExample.passNameAge("Sulieman",25))
                 }) {
                 Text("Navigate to Optional Arg Route")
             }

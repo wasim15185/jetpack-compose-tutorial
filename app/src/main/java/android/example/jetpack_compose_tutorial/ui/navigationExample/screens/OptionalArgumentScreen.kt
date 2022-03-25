@@ -17,7 +17,9 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun OptionalArgumentScreen(
-    navController: NavHostController
+    navController: NavHostController ,
+    name : String,
+    age:Int
 ){
 
     Box(
@@ -36,7 +38,7 @@ fun OptionalArgumentScreen(
             )
 
             Text(
-                text = "Test ",
+                text = "Hello My name is $name and age is $age ",
                 color = Color.Green,
                 fontSize = 26.sp,
                 fontWeight = FontWeight.SemiBold,
