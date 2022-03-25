@@ -1,6 +1,7 @@
 package android.example.jetpack_compose_tutorial
 
 
+import android.example.jetpack_compose_tutorial.ui.navigationExample.navigation.SetupNavGraph
 import android.example.jetpack_compose_tutorial.ui.progress.*
 import android.example.jetpack_compose_tutorial.ui.theme.JetpackcomposetutorialTheme
 import android.os.Bundle
@@ -15,11 +16,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
 class MainActivity : ComponentActivity() {
 
-    lateinit var navController: NavController
+    lateinit var navController: NavHostController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +37,7 @@ class MainActivity : ComponentActivity() {
 //            Chapter5WithDisposableEffect(onBackPressedDispatcher)
 //            Chapter6_Timer()
 
+            SetupNavGraph(navController = navController)
 
 
 

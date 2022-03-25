@@ -20,23 +20,24 @@ But, In android **jetpack compose** navigation happens **between to Composable**
   each and every **Screens** should have **A unique Name or Route** . There are many different way to define route  **using Sealed class** or  **using constant of Route etc** .
 but we recommended , we define route ***using Sealed class*** <br/>
 
-Here , we use navigation will happen between two screen `1. HomeScreen` and `2. DetailScreen` .
+Here , we use navigation will happen between three screen `1. HomeScreen` and `2. DetailScreen` and `3. ArgumentExampleScreen` .
 
 ***At first*** , we have to define Unique Route name inside sealed class named `ScreensHolder` . In this class parameter is String which is route and it must be unique  and there are 
 two object inside the `ScreensHolder` class . 
 
 ```
 sealed class ScreensHolder(val route:String){
-    object Home:ScreensHolder("home_screen")
-    object Detail:ScreensHolder("detail_screen")
+    object Home:ScreensHolder("home_screen") // <-- Without argument navigation
+    object Detail:ScreensHolder("detail_screen") // <-- Without argument navigation
+    object ArgumentExample:ScreensHolder("argument_screen") // <-- With argument navigation
 }
 ```
 
-***Secondly*** , we have to create initialize Nav-Controller Object in MainActivity and `rememberNavController()` function create Nav-Controller for us 
+***Secondly*** , we have to create initialize NavHostController Object in `navController` variable  in MainActivity and `rememberNavController()` function create Nav-Controller for us 
 ```
 class MainActivity : ComponentActivity() {
 
-    lateinit var navController: NavController
+    lateinit var navController: NavHostController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,8 +65,9 @@ fun SetupNavGraph(navController: NavHostController){
         /**
          * Inside NavHost lambda-block we can access [composable] function
          *
-         * [composable] : in this function we have to pass "Route-Name" which is unique and in this function have Lambda-block 
-         * which is for defining for "Destination-Screen" .
+         * [composable] : in this function we have to pass "Route-Name" which 
+         * is unique and in this function have Lambda-block which is for 
+         * defining for "Destination-Screen" .
          */
 
         composable(route = ScreensHolder.Home.route){
@@ -76,12 +78,17 @@ fun SetupNavGraph(navController: NavHostController){
             DetailScreen()
         }
 
+        
 
     }
 
 }
 
 ```
+
+#### Navigation with arguments 
+
+now, we want navigation with argument there are two ways where 
 
 
 </p>
