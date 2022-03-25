@@ -94,8 +94,8 @@ now, we want navigation with argument . there are two ways where we can do navig
 
 **Required Argument** : 
 
-For Simplicity , We focus on particular code for Required Argument Navigation
-- - - -
+##### For Simplicity , We focus on particular code for `Required Argument Navigation`
+ 
 
 
 
