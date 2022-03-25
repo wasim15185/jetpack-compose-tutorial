@@ -222,8 +222,8 @@ fun HomeScreen(navController: NavHostController) {
  
 
 ```
-**3rd step :** we have to call  `navController.navigate(route = "required_argument_screen/"+ 5)` From `HomeScreen`
-here `"required_argument_screen/{_id}"` represent as `"required_argument_screen/"+ 5` where `_id` represent is `5`
+**3rd step :** we have to call  **`navController.navigate(route = "required_argument_screen/"+ 5)`** From **`HomeScreen`**
+here **`"required_argument_screen/{_id}"`** represent as **`"required_argument_screen/"+ 5`** where **`_id`** represent is **`5`**
 
 
 
