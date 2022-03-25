@@ -182,6 +182,45 @@ below here is the full code of NavGraph
 
 }
 
+
+// Home Screen
+//-----------------------
+@Composable
+fun HomeScreen(navController: NavHostController) {
+
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            modifier = Modifier,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = "Home Screen",
+                color = MaterialTheme.colors.primary,
+                fontSize = MaterialTheme.typography.h3.fontSize,
+                fontWeight = FontWeight.Bold,
+            )
+ 
+            Button(
+                modifier = Modifier.padding(top = 10.dp),
+                onClick = {
+                    navController.navigate(route = "required_argument_screen/"+ 5) // <-- See we call Nav-Controller to navigate to RequiredArgumentScreen
+                }) {
+                Text("Navigate to Required Arg Route")
+            }
+
+           
+        }
+
+    }
+
+}
+
+ 
+
 ```
 
 
