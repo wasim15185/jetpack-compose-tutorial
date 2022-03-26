@@ -230,7 +230,7 @@ here **`"required_argument_screen/{_id}"`** represent as **`"required_argument_s
 
 ``` 
 sealed class ScreensHolder(val route:String){
-    object OptionalArgExample:   ScreensHolder("optional_argument_screen?name={_name} && age={_age}")
+    object OptionalArgExample:   ScreensHolder("optional_argument_screen?name={_name} & age={_age}")
 }
 ```
 
